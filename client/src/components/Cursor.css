@@ -1,0 +1,64 @@
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-cyan);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, opacity 0.2s ease;
+}
+
+/* Cursor states */
+.cursor-dot.hovering {
+    width: 12px;
+    height: 12px;
+}
+
+.cursor-follower.hovering {
+    width: 48px;
+    height: 48px;
+    border-color: var(--color-cyan);
+}
+
+.cursor-dot.hidden,
+.cursor-follower.hidden {
+    opacity: 0;
+}
+
+/* Hide on touch devices */
+@media (hover: none) and (pointer: coarse) {
+
+    .cursor-dot,
+    .cursor-follower {
+        display: none;
+    }
+}
+
+/* Hide for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .cursor-dot,
+    .cursor-follower {
+        display: none;
+    }
+}

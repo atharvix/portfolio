@@ -1,0 +1,74 @@
+.section-skills {
+    padding: 6rem 0;
+    background: radial-gradient(circle at center, rgba(189, 0, 255, 0.05) 0%, transparent 70%);
+}
+
+.skills-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-dim);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-mono);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--color-purple);
+    color: var(--color-purple);
+    background: rgba(189, 0, 255, 0.1);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.skill-item {
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    border-color: var(--color-purple);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(189, 0, 255, 0.2);
+}
+
+.skill-icon {
+    color: var(--color-purple);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    color: var(--color-text-dim);
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

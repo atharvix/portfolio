@@ -1,0 +1,55 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(5, 5, 10, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    padding: 1rem 2rem;
+    background: rgba(5, 5, 10, 0.9);
+}
+
+.logo {
+    font-size: 1.25rem;
+    color: var(--color-cyan);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--color-text-dim);
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--color-cyan);
+}
+
+.nav-links li a::before {
+    content: '>';
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    color: var(--color-cyan);
+    transition: opacity 0.3s ease;
+}
+
+.nav-links li a:hover::before {
+    opacity: 1;
+}
