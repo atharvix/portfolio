@@ -36,13 +36,41 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
+  background: linear-gradient(180deg,
+      #000000 0%,
+      #0a0a12 20%,
+      #1a0a2e 50%,
+      #0a0a12 80%,
+      #000000 100%);
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-sans);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Cyan accent overlay near hero */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(ellipse at center top,
+      rgba(0, 243, 255, 0.08) 0%,
+      transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-container {
+  position: relative;
+  z-index: 1;
 }
 
 h1,

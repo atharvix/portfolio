@@ -1,5 +1,5 @@
 .section-about {
-    padding: 8rem 0;
+    padding: var(--space-xl) 0;
     position: relative;
 }
 

@@ -1,41 +1,62 @@
 [
     {
         "id": 1,
-        "title": "Neon Nexus",
-        "description": "A cyberpunk dashboard for efficient task management with real-time collaboration.",
+        "title": "NEURAL_NEXUS",
+        "description": "Real-time collaborative task management platform with AI-powered prioritization and cyberpunk UI. Built for distributed teams.",
         "tags": [
             "React",
-            "Three.js",
+            "WebSocket",
+            "TensorFlow.js",
             "Node.js"
         ],
         "image": "/images/project1.png",
-        "demo": "https://example.com",
-        "github": "https://github.com/username/project1"
+        "demo": "https://example.com/neural-nexus",
+        "github": "https://github.com/username/neural-nexus",
+        "impact": "Reduced team coordination time by 40%"
     },
     {
         "id": 2,
-        "title": "Quantum Chat",
-        "description": "End-to-end encrypted messaging with quantum-resistant cryptographic keys.",
+        "title": "QUANTUM_CHAT",
+        "description": "End-to-end encrypted messaging with quantum-resistant cryptography. Zero-knowledge architecture ensures complete privacy.",
         "tags": [
             "Svelte",
-            "Socket.io",
-            "Rust"
+            "WebRTC",
+            "Rust",
+            "libsodium"
         ],
         "image": "/images/project2.png",
-        "demo": "https://example.com",
-        "github": "https://github.com/username/project2"
+        "demo": "https://example.com/quantum-chat",
+        "github": "https://github.com/username/quantum-chat",
+        "impact": "10K+ active users, 99.9% uptime"
     },
     {
         "id": 3,
-        "title": "Neural Canvas",
-        "description": "AI-powered generative art platform using stable diffusion models.",
+        "title": "SYNTH_CANVAS",
+        "description": "AI-powered generative art platform using stable diffusion models. Create, remix, and mint NFTs with real-time collaboration.",
         "tags": [
             "Python",
             "FastAPI",
-            "WebGL"
+            "WebGL",
+            "Three.js"
         ],
         "image": "/images/project3.png",
-        "demo": "https://example.com",
-        "github": "https://github.com/username/project3"
+        "demo": "https://example.com/synth-canvas",
+        "github": "https://github.com/username/synth-canvas",
+        "impact": "Generated $50K in creator revenue"
+    },
+    {
+        "id": 4,
+        "title": "CYBER_METRICS",
+        "description": "Real-time analytics dashboard with predictive insights. Processes 1M+ events/second with sub-100ms latency.",
+        "tags": [
+            "TypeScript",
+            "D3.js",
+            "Redis",
+            "Kafka"
+        ],
+        "image": "/images/project4.png",
+        "demo": "https://example.com/cyber-metrics",
+        "github": "https://github.com/username/cyber-metrics",
+        "impact": "Deployed at 50+ enterprise clients"
     }
 ]

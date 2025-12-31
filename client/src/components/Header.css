@@ -55,3 +55,39 @@
 .nav-links li a:hover::before {
     opacity: 1;
 }
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: rgba(5, 5, 10, 0.98);
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        border-left: 1px solid rgba(0, 243, 255, 0.2);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        display: block;
+        padding: 0.5rem 0;
+    }
+}

@@ -10,15 +10,18 @@ const Projects = () => {
     const containerRef = useRef(null);
 
     useGSAP(() => {
+        // Fix: Ensure cards are visible even if animation hasn't triggered
+        gsap.set('.project-card', { opacity: 1, y: 0 });
+
         gsap.from('.project-card', {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: 'top 80%'
             },
-            y: 100,
+            y: 60,
             opacity: 0,
-            stagger: 0.2,
-            duration: 0.8,
+            stagger: 0.15,
+            duration: 0.6,
             ease: 'power3.out'
         });
     }, { scope: containerRef });
@@ -26,29 +29,43 @@ const Projects = () => {
     return (
         <section id="projects" className="section-projects" ref={containerRef}>
             <div className="container">
-                <h2 className="section-title mono text-center text-cyan">&lt;Projects /&gt;</h2>
+                <h2 className="section-title mono text-center text-cyan">_PROJECTS</h2>
 
                 <div className="projects-grid">
                     {projectsData.map((project) => (
                         <div
                             key={project.id}
-                            className="project-card glow-box"
+                            className="project-card terminal-window"
                             onClick={() => setSelectedProject(project)}
                         >
-                            <div className="card-header">
-                                <div className="dots">
+                            <div className="terminal-header">
+                                <div className="terminal-dots">
                                     <span className="dot red"></span>
                                     <span className="dot yellow"></span>
                                     <span className="dot green"></span>
                                 </div>
-                                <span className="card-title mono">{project.title}</span>
+                                <span className="terminal-title mono">{project.title}</span>
                             </div>
-                            <div className="card-body">
-                                <p className="card-desc">{project.description}</p>
-                                <div className="card-tags">
-                                    {project.tags.map(tag => (
-                                        <span key={tag} className="tag mono">#{tag}</span>
-                                    ))}
+                            <div className="terminal-body">
+                                <div className="code-line">
+                                    <span className="line-number">01</span>
+                                    <span className="keyword">const</span> <span className="var">project</span> = <span className="brace">{'{'}</span>
+                                </div>
+                                <div className="code-line indent">
+                                    <span className="line-number">02</span>
+                                    <span className="key">description:</span> <span className="string">"{project.description.substring(0, 60)}..."</span>
+                                </div>
+                                <div className="code-line indent">
+                                    <span className="line-number">03</span>
+                                    <span className="key">stack:</span> <span className="array">[{project.tags.map(t => `"${t}"`).join(', ')}]</span>
+                                </div>
+                                <div className="code-line indent">
+                                    <span className="line-number">04</span>
+                                    <span className="key">impact:</span> <span className="string">"{project.impact}"</span>
+                                </div>
+                                <div className="code-line">
+                                    <span className="line-number">05</span>
+                                    <span className="brace">{'}'}</span>
                                 </div>
                             </div>
                         </div>
@@ -58,24 +75,37 @@ const Projects = () => {
 
             {selectedProject && (
                 <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
-                    <div className="modal-content glow-box" onClick={e => e.stopPropagation()}>
+                    <div className="modal-content terminal-window" onClick={e => e.stopPropagation()}>
                         <button className="close-btn" onClick={() => setSelectedProject(null)}>
                             <X size={24} />
                         </button>
-                        <h3 className="modal-title mono text-cyan">{selectedProject.title}</h3>
-                        <p className="modal-desc">{selectedProject.description}</p>
-                        <div className="modal-tags">
-                            {selectedProject.tags.map(tag => (
-                                <span key={tag} className="tag mono">#{tag}</span>
-                            ))}
+                        <div className="terminal-header">
+                            <div className="terminal-dots">
+                                <span className="dot red"></span>
+                                <span className="dot yellow"></span>
+                                <span className="dot green"></span>
+                            </div>
+                            <span className="terminal-title mono">{selectedProject.title}</span>
                         </div>
-                        <div className="modal-actions">
-                            <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer" className="btn-modal">
-                                <ExternalLink size={18} /> Live Demo
-                            </a>
-                            <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="btn-modal secondary">
-                                <Github size={18} /> Source Code
-                            </a>
+                        <div className="modal-body">
+                            <p className="modal-desc">{selectedProject.description}</p>
+                            <div className="modal-tags">
+                                {selectedProject.tags.map(tag => (
+                                    <span key={tag} className="tag mono">#{tag}</span>
+                                ))}
+                            </div>
+                            <div className="impact-line">
+                                <span className="impact-label mono">Impact:</span>
+                                <span className="impact-value text-cyan">{selectedProject.impact}</span>
+                            </div>
+                            <div className="modal-actions">
+                                <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer" className="btn-modal">
+                                    <ExternalLink size={18} /> Live Demo
+                                </a>
+                                <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="btn-modal secondary">
+                                    <Github size={18} /> Source Code
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
