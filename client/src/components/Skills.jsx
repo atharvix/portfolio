@@ -5,15 +5,30 @@ import { Code, Server, Database, Layout, Smartphone, Box, Terminal, Cpu } from '
 import './Skills.css';
 
 const allSkills = [
-    { name: 'React', category: 'frontend', icon: Code },
-    { name: 'Node.js', category: 'backend', icon: Server },
-    { name: 'PostgreSQL', category: 'backend', icon: Database },
-    { name: 'CSS/Sass', category: 'frontend', icon: Layout },
-    { name: 'Svelte', category: 'frontend', icon: Box },
-    { name: 'Mobile', category: 'frontend', icon: Smartphone },
-    { name: 'DevOps', category: 'tools', icon: Terminal },
-    { name: 'System Design', category: 'backend', icon: Cpu },
+    // Core
+    { name: 'React', category: 'core', icon: Code },
+    { name: 'TypeScript', category: 'core', icon: Code },
+    { name: 'Node.js', category: 'core', icon: Server },
+    { name: 'CSS/Sass', category: 'core', icon: Layout },
+
+    // Working Knowledge
+    { name: 'PostgreSQL', category: 'working', icon: Database },
+    { name: 'Svelte', category: 'working', icon: Box },
+    { name: 'Mobile Dev', category: 'working', icon: Smartphone },
+    { name: 'System Design', category: 'working', icon: Cpu },
+
+    // Tools
+    { name: 'Git', category: 'tools', icon: Terminal },
+    { name: 'Docker', category: 'tools', icon: Box },
+    { name: 'Figma', category: 'tools', icon: Layout },
+    { name: 'VS Code', category: 'tools', icon: Code },
 ];
+
+const categoryLabels = {
+    core: 'Core Skills',
+    working: 'Working Knowledge',
+    tools: 'Tools & Platforms'
+};
 
 const Skills = () => {
     const [filter, setFilter] = useState('all');
@@ -22,6 +37,15 @@ const Skills = () => {
     const filteredSkills = filter === 'all'
         ? allSkills
         : allSkills.filter(s => s.category === filter);
+
+    // Group skills by category for display
+    const groupedSkills = filter === 'all'
+        ? {
+            core: allSkills.filter(s => s.category === 'core'),
+            working: allSkills.filter(s => s.category === 'working'),
+            tools: allSkills.filter(s => s.category === 'tools')
+        }
+        : null;
 
     useGSAP(() => {
         gsap.fromTo('.skill-item',
@@ -36,25 +60,43 @@ const Skills = () => {
                 <h2 className="section-title mono text-center text-purple">&lt;Skills /&gt;</h2>
 
                 <div className="skills-filter mono">
-                    {['all', 'frontend', 'backend', 'tools'].map(cat => (
+                    {['all', 'core', 'working', 'tools'].map(cat => (
                         <button
                             key={cat}
                             className={`filter-btn ${filter === cat ? 'active' : ''}`}
                             onClick={() => setFilter(cat)}
                         >
-                            _{cat.toUpperCase()}
+                            _{cat === 'all' ? 'ALL' : categoryLabels[cat].toUpperCase()}
                         </button>
                     ))}
                 </div>
 
-                <div className="skills-grid">
-                    {filteredSkills.map((skill) => (
-                        <div key={skill.name} className="skill-item glow-box">
-                            <skill.icon className="skill-icon" size={32} />
-                            <span className="skill-name mono">{skill.name}</span>
-                        </div>
-                    ))}
-                </div>
+                {filter === 'all' ? (
+                    <div className="skills-categories">
+                        {Object.entries(groupedSkills).map(([category, skills]) => (
+                            <div key={category} className="skill-category">
+                                <h3 className="category-title mono">{categoryLabels[category]}</h3>
+                                <div className="skills-grid">
+                                    {skills.map((skill) => (
+                                        <div key={skill.name} className="skill-item">
+                                            <skill.icon className="skill-icon" size={28} />
+                                            <span className="skill-name mono">{skill.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="skills-grid">
+                        {filteredSkills.map((skill) => (
+                            <div key={skill.name} className="skill-item">
+                                <skill.icon className="skill-icon" size={28} />
+                                <span className="skill-name mono">{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     );

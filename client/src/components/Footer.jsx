@@ -8,9 +8,33 @@ const Footer = () => {
                 <div className="footer-logo mono text-cyan">&lt;Antigravity /&gt;</div>
 
                 <div className="footer-links">
-                    <a href="#" className="footer-link"><Github size={20} /></a>
-                    <a href="#" className="footer-link"><Twitter size={20} /></a>
-                    <a href="#" className="footer-link"><Linkedin size={20} /></a>
+                    <a
+                        href="https://github.com/yourusername"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-link"
+                        aria-label="GitHub"
+                    >
+                        <Github size={20} />
+                    </a>
+                    <a
+                        href="https://twitter.com/yourusername"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-link"
+                        aria-label="Twitter"
+                    >
+                        <Twitter size={20} />
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/yourusername"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-link"
+                        aria-label="LinkedIn"
+                    >
+                        <Linkedin size={20} />
+                    </a>
                 </div>
 
                 <div className="footer-copy mono text-dim">

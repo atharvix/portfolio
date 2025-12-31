@@ -61,31 +61,40 @@ const About = () => {
     return (
         <section id="about" className="section-about" ref={containerRef}>
             <div className="container about-container">
-                <div className="about-text">
-                    <h2 className="section-title mono text-cyan">&lt;About /&gt;</h2>
-                    <p className="lead">
-                        I am a developer who bridges the gap between <span className="text-purple">design</span> and <span className="text-cyan">engineering</span>.
-                    </p>
-                    <p>
-                        With a background in both visual arts and computer science, I craft digital products that look beautiful and perform perfectly. I specialize in React, WebGL, and accessible motion.
-                    </p>
-                    <p>
-                        When not coding, I am exploring cyberpunk aesthetics and experimenting with generative art.
-                    </p>
+                <div className="about-profile">
+                    <div className="profile-photo">
+                        {/* Replace with actual image: <img src="/images/profile.jpg" alt="Profile" /> */}
+                        <span>[ PROFILE PHOTO ]</span>
+                    </div>
                 </div>
 
-                <div className="experience-list">
-                    <h3 className="exp-title mono">_EXPERIENCE</h3>
-                    {experiences.map((exp, index) => (
-                        <div key={index} className="exp-card glow-box">
-                            <div className="exp-header">
-                                <span className="exp-role text-cyan">{exp.role}</span>
-                                <span className="exp-period mono text-dim">{exp.period}</span>
+                <div className="about-content">
+                    <div className="about-text">
+                        <h2 className="section-title mono text-cyan">&lt;About /&gt;</h2>
+                        <p className="lead">
+                            I am a developer who bridges the gap between <span className="text-purple">design</span> and <span className="text-cyan">engineering</span>.
+                        </p>
+                        <p>
+                            With a background in both visual arts and computer science, I craft digital products that look beautiful and perform perfectly. I specialize in React, WebGL, and accessible motion.
+                        </p>
+                        <p>
+                            When not coding, I am exploring cyberpunk aesthetics and experimenting with generative art.
+                        </p>
+                    </div>
+
+                    <div className="experience-list">
+                        <h3 className="exp-title mono">_EXPERIENCE</h3>
+                        {experiences.map((exp, index) => (
+                            <div key={index} className="exp-card glow-box">
+                                <div className="exp-header">
+                                    <span className="exp-role text-cyan">{exp.role}</span>
+                                    <span className="exp-period mono text-dim">{exp.period}</span>
+                                </div>
+                                <h4 className="exp-company">{exp.company}</h4>
+                                <p className="exp-desc text-dim">{exp.desc}</p>
                             </div>
-                            <h4 className="exp-company">{exp.company}</h4>
-                            <p className="exp-desc text-dim">{exp.desc}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

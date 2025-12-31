@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 2rem;
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -14,14 +14,15 @@
 }
 
 .header.scrolled {
-    padding: 1rem 2rem;
+    padding: 0.9rem 2rem;
     background: rgba(5, 5, 10, 0.9);
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--color-cyan);
     text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+    letter-spacing: 0.02em;
 }
 
 .nav-links {
@@ -32,9 +33,10 @@
 
 .nav-links li a {
     position: relative;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--color-text-dim);
     transition: color 0.3s ease;
+    letter-spacing: 0.1em;
 }
 
 .nav-links li a:hover {

@@ -1,0 +1,96 @@
+.section-experience {
+    padding: 6rem 0;
+    background: radial-gradient(circle at center, rgba(189, 0, 255, 0.03) 0%, transparent 70%);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-md);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background: rgba(10, 10, 18, 0.6);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    border-color: rgba(189, 0, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(189, 0, 255, 0.1);
+}
+
+.exp-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-sm);
+    gap: var(--space-sm);
+}
+
+.exp-card-company {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.exp-card-duration {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+.exp-card-role {
+    font-size: 1rem;
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+.exp-card-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exp-card-points li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.exp-card-points li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-purple);
+    font-size: 1.2rem;
+}
+
+.exp-card-points li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-card-header {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .exp-card-duration {
+        white-space: normal;
+    }
+}
