@@ -8,30 +8,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
     {
-        company: 'TechCorp Inc.',
+        id: 'exp-1',
         role: 'Frontend Engineer Intern',
+        company: 'TechCorp Inc.',
         duration: 'Jun 2023 - Aug 2023',
-        points: [
+        impact: [
             'Built responsive dashboard using React and TypeScript',
             'Improved page load time by 40% through code splitting',
             'Collaborated with design team on component library'
         ]
     },
     {
-        company: 'Digital Agency',
+        id: 'exp-2',
         role: 'Freelance Web Developer',
+        company: 'Digital Agency',
         duration: 'Jan 2022 - May 2023',
-        points: [
+        impact: [
             'Delivered 8+ client websites with 100% satisfaction rate',
             'Specialized in GSAP animations and WebGL experiences',
             'Managed full project lifecycle from design to deployment'
         ]
     },
     {
-        company: 'StartUp Labs',
+        id: 'exp-3',
         role: 'Full Stack Developer Intern',
+        company: 'StartUp Labs',
         duration: 'Summer 2022',
-        points: [
+        impact: [
             'Developed RESTful APIs using Node.js and Express',
             'Implemented authentication system with JWT',
             'Wrote unit tests achieving 85% code coverage'
@@ -43,23 +46,47 @@ const Experience = () => {
     const containerRef = useRef(null);
 
     useGSAP(() => {
-        const tl = gsap.timeline({
+        // CRITICAL FIX: Set initial visibility to ensure all cards render
+        gsap.set('.exp-terminal', { opacity: 1, y: 0 });
+        gsap.set('.timeline-line', { height: 'auto' });
+        gsap.set('.exp-node', { scale: 1, opacity: 1 });
+
+        // Animate timeline line
+        gsap.from('.timeline-line', {
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: 'top 80%',
-                end: 'bottom 20%',
-                toggleActions: 'play none none reverse'
-            }
+                start: 'top 70%'
+            },
+            height: 0,
+            duration: 1.5,
+            ease: 'power2.inOut'
         });
 
-        tl.from('.experience-card', {
-            y: 60,
+        // Animate each timeline node - targets ALL nodes
+        gsap.from('.exp-node', {
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: 'top 70%'
+            },
+            scale: 0,
             opacity: 0,
-            stagger: 0.15,
-            duration: 0.7,
+            stagger: 0.3,
+            duration: 0.5,
+            ease: 'back.out(1.7)'
+        });
+
+        // Animate terminal cards - targets ALL cards with stagger
+        gsap.from('.exp-terminal', {
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: 'top 70%'
+            },
+            x: 100,
+            opacity: 0,
+            stagger: 0.3,
+            duration: 0.8,
             ease: 'power3.out'
         });
-
     }, { scope: containerRef });
 
     return (
@@ -67,19 +94,46 @@ const Experience = () => {
             <div className="container">
                 <h2 className="section-title mono text-center text-purple">_EXPERIENCE</h2>
 
-                <div className="experience-grid">
-                    {experiences.map((exp, index) => (
-                        <div key={index} className="experience-card">
-                            <div className="exp-card-header">
-                                <h3 className="exp-card-company">{exp.company}</h3>
-                                <span className="exp-card-duration mono text-dim">{exp.duration}</span>
+                <div className="experience-timeline">
+                    <div className="timeline-line"></div>
+
+                    {experiences.map((exp) => (
+                        <div key={exp.id} className="exp-item">
+                            <div className="exp-node"></div>
+
+                            <div className="exp-terminal terminal-window">
+                                <div className="terminal-header">
+                                    <div className="terminal-dots">
+                                        <span className="dot red"></span>
+                                        <span className="dot yellow"></span>
+                                        <span className="dot green"></span>
+                                    </div>
+                                    <span className="terminal-title mono text-dim">{exp.duration}</span>
+                                </div>
+
+                                <div className="terminal-body">
+                                    <div className="log-line">
+                                        <span className="prompt">{'>'}</span>
+                                        <span className="log-key">role:</span>
+                                        <span className="log-value text-cyan">{exp.role}</span>
+                                    </div>
+                                    <div className="log-line">
+                                        <span className="prompt">{'>'}</span>
+                                        <span className="log-key">company:</span>
+                                        <span className="log-value">{exp.company}</span>
+                                    </div>
+                                    <div className="log-line">
+                                        <span className="prompt">{'>'}</span>
+                                        <span className="log-key">impact:</span>
+                                    </div>
+                                    {exp.impact.map((point, i) => (
+                                        <div key={i} className="log-line indent">
+                                            <span className="bullet">-</span>
+                                            <span className="log-text text-dim">{point}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <h4 className="exp-card-role text-cyan">{exp.role}</h4>
-                            <ul className="exp-card-points">
-                                {exp.points.map((point, i) => (
-                                    <li key={i}>{point}</li>
-                                ))}
-                            </ul>
                         </div>
                     ))}
                 </div>
