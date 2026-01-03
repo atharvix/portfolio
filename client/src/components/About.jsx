@@ -41,7 +41,7 @@ const About = () => {
             <div className="container about-container">
                 <div className="about-profile">
                     <div className="profile-photo">
-                        {/* Replace with actual image: <img src="/images/profile.jpg" alt="Profile" /> */}
+                        {<img src=".../images/profile.jpg" alt="Profile" /> }
                         <span>[ PROFILE PHOTO ]</span>
                     </div>
                 </div>

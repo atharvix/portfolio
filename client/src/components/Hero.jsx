@@ -61,9 +61,9 @@ const Hero = () => {
                         </div>
                         <div className="editor-content mono">
                             <div className="line"><span className="keyword">const</span> <span className="var">coder</span> = <span className="brace">{'{'}</span></div>
-                            <div className="line indent">  name: <span className="string">'Mehro'</span>,</div>
-                            <div className="line indent">  role: <span className="string">'Frontend Engineer'</span>,</div>
-                            <div className="line indent">  skills: [<span className="string">'React'</span>, <span className="string">'GSAP'</span>, <span className="string">'WebGL'</span>],</div>
+                            <div className="line indent">  name: <span className="string">'Atharv Mehrotra'</span>,</div>
+                            <div className="line indent">  role: <span className="string">'Backend Developer'</span>,</div>
+                            <div className="line indent">  skills: [<span className="string">'Node.js'</span>, <span className="string">'React'</span>, <span className="string">'Spring Boot'</span>],</div>
                             <div className="line indent">  status: <span className="string">'Ready to build'</span></div>
                             <div className="line"><span className="brace">{'}'}</span>;</div>
                             <div className="line typing-cursor">|</div>
