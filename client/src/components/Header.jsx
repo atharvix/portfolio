@@ -16,6 +16,7 @@ const Header = () => {
             <nav>
                 <ul className="nav-links mono">
                     <li><a href="#about">_ABOUT</a></li>
+                    <li><a href="#experience">_EXPERIENCE</a></li>
                     <li><a href="#projects">_PROJECTS</a></li>
                     <li><a href="#contact">_CONTACT</a></li>
                 </ul>
