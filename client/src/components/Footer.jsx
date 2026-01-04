@@ -5,7 +5,9 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container footer-content">
-                <div className="footer-logo mono text-cyan">&lt;Antigravity /&gt;</div>
+                <a href="#hero" className="footer-logo-btn" aria-label="Back to top">
+                    <img src="/vite.svg" alt="Atharvix logo" className="footer-logo" />
+                </a>
 
                 <div className="footer-links">
                     <a
