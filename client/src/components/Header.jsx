@@ -12,7 +12,9 @@ const Header = () => {
 
     return (
         <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-            <div className="logo mono font-bold">&lt;Antigravity /&gt;</div>
+            <a href="#hero" className="logo-hero-btn" aria-label="Go to hero section">
+                <img src="/vite.svg" alt="Atharvix logo" className="site-logo" />
+            </a>
             <nav>
                 <ul className="nav-links mono">
                     <li><a href="#about">_ABOUT</a></li>

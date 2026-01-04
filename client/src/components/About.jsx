@@ -27,9 +27,9 @@ const About = () => {
             ease: 'power3.out'
         });
 
-        tl.from('.profile-photo', {
+        tl.from('.about-photo-wrapper', {
             scale: 0.9,
-            opacity: 0,
+            opacity: 1,
             duration: 0.8,
             ease: 'back.out(1.2)'
         }, '-=0.6');
@@ -40,9 +40,12 @@ const About = () => {
         <section id="about" className="section-about" ref={containerRef}>
             <div className="container about-container">
                 <div className="about-profile">
-                    <div className="profile-photo">
-                        {<img src=".../images/profile.jpg" alt="Profile" /> }
-                        <span>[ PROFILE PHOTO ]</span>
+                    <div className="about-photo-wrapper">
+                        <img
+                            src="/images/profile.jpg"
+                            alt="Atharvix profile"
+                            className="about-profile-img"
+                        />
                     </div>
                 </div>
 
@@ -50,13 +53,14 @@ const About = () => {
                     <div className="about-text">
                         <h2 className="section-title mono text-cyan">_ABOUT</h2>
                         <p className="lead">
-                            I am a developer who bridges the gap between <span className="text-purple">design</span> and <span className="text-cyan">engineering</span>.
+                            I build secure backend systems with a <span className="text-cyan">Linux-first</span> mindset and a focus on <span className="text-purple">performance</span> at scale.
                         </p>
-                        <p>
-                            With a background in both visual arts and computer science, I craft digital products that look beautiful and perform perfectly. I specialize in React, WebGL, and accessible motion.
-                        </p>
-                        <p>
-                            When not coding, I am exploring cyberpunk aesthetics and experimenting with generative art.
+                        <p className="mono" style={{ fontSize: '0.95rem', lineHeight: '1.8', opacity: 0.9 }}>
+                            <span className="text-dim"># Core competencies:</span><br />
+                            <span className="text-cyan">→</span> Designing robust APIs and authentication systems with Node.js & Spring<br />
+                            <span className="text-cyan">→</span> Deep expertise in Linux server environments and system administration<br />
+                            <span className="text-cyan">→</span> Security-aware development practices and threat modeling<br />
+                            <span className="text-cyan">→</span> Building scalable architectures optimized for reliability and speed
                         </p>
                     </div>
                 </div>

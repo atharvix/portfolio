@@ -11,8 +11,22 @@
     align-items: center;
 }
 
+.footer-logo-btn {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
 .footer-logo {
-    font-weight: 700;
+    height: 46px !important;
+    width: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo-btn:hover .footer-logo {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(0, 243, 255, 0.6));
 }
 
 .footer-links {
