@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
 
                 <div className="footer-links">
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/atharvix"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="footer-link"
@@ -20,16 +20,7 @@ const Footer = () => {
                         <Github size={20} />
                     </a>
                     <a
-                        href="https://twitter.com/yourusername"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="footer-link"
-                        aria-label="Twitter"
-                    >
-                        <Twitter size={20} />
-                    </a>
-                    <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://linkedin.com/in/atharvmehrotra27"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="footer-link"
@@ -40,7 +31,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-copy mono text-dim">
-                    &copy; {new Date().getFullYear()} Mehro. All systems nominal.
+                    &copy; {new Date().getFullYear()} atharvix. All systems nominal.
                 </div>
             </div>
         </footer>

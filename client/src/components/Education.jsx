@@ -5,16 +5,16 @@ import './Education.css';
 
 const educationData = [
     {
-        year: '2023',
-        degree: 'Master of Computer Science',
-        school: 'Tech University',
-        desc: 'Specialized in AI and Human-Computer Interaction.'
+        year: '2024 - 2028',
+        degree: 'Bachelor of Technology in Computer Science & Artificial Intelligence',
+        school: 'JK Lakshmipat University',
+        desc: 'Specialized in Full Stack Web Development with AI and Human-Computer Interaction.'
     },
     {
-        year: '2021',
-        degree: 'Bachelor of Arts in Design',
-        school: 'Creative Institute',
-        desc: 'Focus on Digital Media and Interactive Arts.'
+        year: '2009 - 2024',
+        degree: 'Highschool & Intermediate Education',
+        school: 'City Montessori School',
+        desc: 'Highschool & Intermediate Education with a focus on Science and Mathematics.'
     }
 ];
 
