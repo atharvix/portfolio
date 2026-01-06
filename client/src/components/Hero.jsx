@@ -1,11 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import './Hero.css';
 
 const Hero = () => {
     const containerRef = useRef(null);
-    const textRef = useRef(null);
 
     useGSAP(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });

@@ -93,7 +93,7 @@ app.post('/api/contact', async (req, res) => {
           <h2 style="color: #00f3ff;">Transmission Received</h2>
           <p>Hi ${name},</p>
           <p>Thank you for reaching out! I have received your message and will get back to you as soon as possible.</p>
-          <p style="margin-top: 30px;">Best regards,<br><strong>Mehro</strong></p>
+          <p style="margin-top: 30px;">Best regards,<br><strong>Atharv Mehrotra</strong></p>
         </div>
       `
     });
