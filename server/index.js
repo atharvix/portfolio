@@ -58,8 +58,10 @@ app.post('/api/contact', async (req, res) => {
       }
     });
 
-    // Verify transporter configuration
-    await transporter.verify();
+    // Verify transporter configuration only in production
+    if (process.env.NODE_ENV === 'production') {
+      await transporter.verify();
+    }
 
     const fromEmail = process.env.FROM_EMAIL || 'noreply@portfolio.com';
     const fromName = process.env.FROM_NAME || 'Portfolio Contact';
