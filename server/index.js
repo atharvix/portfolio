@@ -8,7 +8,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://atharvix.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -17,6 +21,7 @@ app.get('/', (req, res) => {
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
+  console.log('📨 Incoming payload:', { name, email, message });
 
   // Validation
   if (!name || !email || !message) {

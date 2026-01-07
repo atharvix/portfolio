@@ -112,7 +112,7 @@ const Contact = () => {
                         {status === 'idle' && <>Send Transmission <Send size={18} /></>}
                         {status === 'loading' && <><Loader className="spin" size={18} /> Sending...</>}
                         {status === 'success' && <>Transmission Sent <Check size={18} /></>}
-                        {status === 'error' && <>Error - Retry <AlertCircle size={18} /></>}
+                        {status === 'error' && <>Error – Retry <AlertCircle size={18} /></>}
                     </button>
                 </form>
             </div>
