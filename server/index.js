@@ -16,7 +16,7 @@ app.use(cors({
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Cyber Portfolio API is running');
+  res.send('Cyber Portfolio API is running successfully.');
 });
 
 app.post('/api/contact', async (req, res) => {
