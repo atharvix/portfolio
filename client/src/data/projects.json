@@ -1,48 +1,61 @@
 [
     {
         "id": 1,
-        "title": "NEURAL_NEXUS",
-        "description": "Real-time collaborative task management platform with AI-powered prioritization and cyberpunk UI. Built for distributed teams.",
+        "title": "ChainOps Ai",
+        "description": "ChainOps AI is an AI-driven operations dashboard for blockchain infrastructure. It continuously monitors node health, analyzes telemetry, and predicts failures in real time. An intelligent agent recommends and executes remediation actions when issues occur. Every decision and action is logged on-chain (Monad) for transparency and auditability.",
         "tags": [
-            "React",
-            "WebSocket",
-            "TensorFlow.js",
-            "Node.js"
+            "Next.js (React)",
+            "TypeScript",
+            "Tailwind CSS",
+            "Node.js",
+            "SQLite3",
+            "Solidity",
+            "WebSockets",
+            "AI agent logic",
+            "On-chain logging (Monad)"
         ],
         "image": "/images/project1.png",
-        "demo": "https://example.com/neural-nexus",
-        "github": "https://github.com/username/neural-nexus",
-        "impact": "Reduced team coordination time by 40%"
+        "demo": "https://lnm-rosy.vercel.app/",
+        "github": "https://github.com/atharvix/lnm",
+        "impact": "Enables self-healing, transparent, and trust-verifiable blockchain infrastructure managed by autonomous AI agents."
     },
     {
         "id": 2,
-        "title": "QUANTUM_CHAT",
-        "description": "End-to-end encrypted messaging with quantum-resistant cryptography. Zero-knowledge architecture ensures complete privacy.",
+        "title": "Ention",
+        "description": "Developed and deployed the official website for Ention as a Web Development Intern, focusing on performance, accessibility, and modern UI/UX. Built responsive pages and optimized load speed, SEO, and cross-device compatibility to improve user experience. Collaborated with the team to translate brand requirements into a scalable, production-ready web platform. The website currently attracts 5K+ monthly visitors, demonstrating real-world impact and reliability.",
         "tags": [
-            "Svelte",
-            "WebRTC",
-            "Rust",
-            "libsodium"
+            "React",
+            "React Router",
+            "TypeScript",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "JWT Authentication",
+            "MongoDB",
+            "SMTP Email Service",
+            "Digital Payments Integration "
+
         ],
         "image": "/images/project2.png",
-        "demo": "https://example.com/quantum-chat",
-        "github": "https://github.com/username/quantum-chat",
-        "impact": "10K+ active users, 99.9% uptime"
+        "demo": "https://ention.in/",
+        "github": "https://github.com/yashmish18/ention1",
+        "impact": "Delivered a production website for Ention that serves 5,000+ monthly users with optimized performance and user experience."
     },
     {
         "id": 3,
-        "title": "SYNTH_CANVAS",
-        "description": "AI-powered generative art platform using stable diffusion models. Create, remix, and mint NFTs with real-time collaboration.",
+        "title": "PillSync 360",
+        "description": "PillSync 360 is an AI-powered healthcare platform that unifies medication management, digital medical records, and emergency support for patients, caregivers, and doctors. It uses OCR to digitize prescriptions, verify medicine intake, and generate adherence insights in real time. A QR-based Smart Med Card and SOS system ensure critical health data is accessible instantly during emergencies. Built with secure role-based access and real-time sync, it enables coordinated, safer care—especially for elderly and chronically ill users.",
         "tags": [
-            "Python",
-            "FastAPI",
-            "WebGL",
-            "Three.js"
+            "Next.js (React)",
+            "TypeScript",
+            "Node.js",
+            "Firebase",
+            "Real-time Sync"
         ],
         "image": "/images/project3.png",
-        "demo": "https://example.com/synth-canvas",
-        "github": "https://github.com/username/synth-canvas",
-        "impact": "Generated $50K in creator revenue"
+        "demo": "https://pillsync-360.vercel.app/",
+        "github": "https://github.com/atharvix/pillsync-360",
+        "impact": "Improves medication adherence, emergency response, and care coordination through a unified AI-driven health management ecosystem. (Best project award at JEC Hackathon 2025)"
     },
     {
         "id": 4,
