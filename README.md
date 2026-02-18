@@ -17,7 +17,7 @@
 ## 🌌 Live Project
 
 🌐 **Website:**  
-👉 https://atharvix-portfoilio.vercel.app  
+👉 https://atharvix-portfolio.vercel.app  
 
 🛰 **Backend API:**  
 👉 https://portfolio-1-m2a0.onrender.com  
