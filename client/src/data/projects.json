@@ -59,17 +59,21 @@
     },
     {
         "id": 4,
-        "title": "CYBER_METRICS",
-        "description": "Real-time analytics dashboard with predictive insights. Processes 1M+ events/second with sub-100ms latency.",
+        "title": "Browser-Vigilant",
+        "description": "Browser Vigilant is a privacy-first browser extension that blocks phishing and scam websites in real time using on-device AI. It combines Rust-based WebAssembly feature extraction, ONNX ML inference, and multi-layer heuristics to stop threats before users interact.",
         "tags": [
-            "TypeScript",
-            "D3.js",
-            "Redis",
-            "Kafka"
+            "Chrome Extension (MV3)",
+            "Rust → WASM",
+            "Svelte",
+            "ONNX ML",
+            "Real-time URL Analysis",
+            "Phishing Detection",
+            "Web Crypto API",
+            "IndexedDB Storage"
         ],
         "image": "/images/project4.png",
         "demo": "https://example.com/cyber-metrics",
-        "github": "https://github.com/username/cyber-metrics",
-        "impact": "Deployed at 50+ enterprise clients"
+        "github": "https://github.com/Prekshas27/Browser-Vigilant",
+        "impact": "Real-time phishing protection that preserves privacy and prevents user data theft."
     }
 ]
