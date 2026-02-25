@@ -22,7 +22,7 @@ const experiences = [
     },
     {
         id: 'exp-2',
-        role: 'Baackend Web Developer Intern',
+        role: 'Backend Web Developer Intern',
         company: 'ENTION®',
         duration: 'June 2025 - Aug 2025',
         impact: [
