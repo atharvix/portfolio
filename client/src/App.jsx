@@ -11,6 +11,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ChromaGrid from './components/ChromaGrid';
 
 import './index.css';
 
@@ -18,7 +19,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   return (
-    <div className="app-container">
+    <div className="app-wrapper">
+      {/* Global animated chroma background */}
+      <div className="global-chroma">
+        <ChromaGrid />
+      </div>
+
       <Cursor />
       <Header />
 

@@ -1,44 +1,66 @@
-# 🌐 Personal Portfolio
+<!-- ================= HERO ================= -->
 
-> A modern developer portfolio showcasing my projects, skills, and technical experience.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=32&duration=2500&pause=800&color=00F3FF&center=true&vCenter=true&width=900&lines=ATHARVIX+PORTFOLIO;Creative+Technologist;Cybersecurity+%7C+Backend+%7C+Linux;Full+Stack+Developer" />
+</p>
 
-![Status](https://img.shields.io/badge/status-live-green)
-![Built With](https://img.shields.io/badge/built-with-modern--web-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
-
----
-
-## 🚀 Overview
-
-This is my personal portfolio website designed to present my projects, technical skills, and development journey.  
-It highlights my work in AI systems, cybersecurity, browser extensions, and full-stack development.
-
-The site is built to be clean, responsive, fast, and focused on clarity.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Live-00f3ff?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-Render-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Node-Express-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/React-Vite-61dafb?style=for-the-badge" />
+</p>
 
 ---
 
-## ✨ Features
+## 🌌 Live Project
 
-- ⚡ Fast and responsive design  
-- 🧠 Project showcase with technical breakdown  
-- 🛠 Skills & technology section  
-- 📄 Resume integration  
-- 🌙 Clean modern UI  
-- 📱 Mobile-friendly layout  
-- 🔗 GitHub & social links  
+🌐 **Website:**  
+👉 https://atharvix-portfolio.vercel.app  
+
+🛰 **Backend API:**  
+👉 https://portfolio-1-m2a0.onrender.com  
 
 ---
 
-## 🧰 Tech Stack
+## 🧠 Overview
 
-### Frontend
-- HTML / CSS / JavaScript  
-- (Add framework if used: React / Svelte / Next.js / etc.)
+A futuristic **cyber-themed developer portfolio** built with a strong focus on:
 
-### Deployment
-- Git & GitHub  
-- Vercel / Netlify / Render (update if applicable)
+- secure backend communication  
+- real email transmission system  
+- animated UI  
+- terminal-style project cards  
+- custom cursor + GSAP motion  
+- production deployment  
+
+This portfolio is not just visual — it includes a **real backend infrastructure**.
 
 ---
 
-## 📁 Project Structure
+## ⚡ Features
+
+- 🖥 Terminal-style UI
+- 🎨 Cyber neon theme
+- ✉️ Contact form → real email delivery
+- 🔐 SMTP secured backend
+- 🧭 GSAP animations
+- 🌀 Custom cursor engine
+- 📱 Fully responsive
+- 🚀 Production deployed
+
+---
+
+## 🏗 Architecture
+
+```txt
+Frontend (Vercel)
+   │
+   │  POST /api/contact
+   ▼
+Backend (Render - Node.js)
+   │
+   │  Nodemailer SMTP
+   ▼
+Email sent to owner + user

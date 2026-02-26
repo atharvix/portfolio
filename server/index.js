@@ -8,15 +8,20 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://portfolio-athm27s-projects.vercel.app/'],
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Cyber Portfolio API is running');
+  res.send('Cyber Portfolio API is running successfully.');
 });
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
+  console.log('📨 Incoming payload:', { name, email, message });
 
   // Validation
   if (!name || !email || !message) {
@@ -58,8 +63,10 @@ app.post('/api/contact', async (req, res) => {
       }
     });
 
-    // Verify transporter configuration
-    await transporter.verify();
+    // Verify transporter configuration only in production
+    if (process.env.NODE_ENV === 'production') {
+      await transporter.verify();
+    }
 
     const fromEmail = process.env.FROM_EMAIL || 'noreply@portfolio.com';
     const fromName = process.env.FROM_NAME || 'Portfolio Contact';

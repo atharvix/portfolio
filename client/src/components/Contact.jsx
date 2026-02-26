@@ -18,7 +18,7 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const response = await fetch('http://localhost:3001/api/contact', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ const Contact = () => {
                         {status === 'idle' && <>Send Transmission <Send size={18} /></>}
                         {status === 'loading' && <><Loader className="spin" size={18} /> Sending...</>}
                         {status === 'success' && <>Transmission Sent <Check size={18} /></>}
-                        {status === 'error' && <>Error - Retry <AlertCircle size={18} /></>}
+                        {status === 'error' && <>Error – Retry <AlertCircle size={18} /></>}
                     </button>
                 </form>
             </div>
