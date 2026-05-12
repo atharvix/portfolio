@@ -75,5 +75,24 @@
         "demo": "https://example.com/cyber-metrics",
         "github": "https://github.com/Prekshas27/Browser-Vigilant",
         "impact": "Real-time phishing protection that preserves privacy and prevents user data theft."
+    },
+    {
+        "id": 5,
+        "title": "SugarAI",
+        "description": "SugarAi is a machine learning-powered model to predit diabetes. It uses a dataset of patient health metrics to train a model that can predict the likelihood of diabetes based on factors like glucose levels, BMI, age, and more. The model is built using Python and scikit-learn, and it achieves high accuracy in predicting diabetes risk.",
+        "tags": [
+            "Streamlit",
+            "Python",
+            "XGBoost",
+            "Random Forest",
+            "Decision Trees",
+            "Logistic Regression",
+            "LightGBM",
+            "ROC-AUC 0.92+ Clinical Performance"
+        ],
+        "image": "/images/project5.png",
+        "demo": "https://sugar-six.vercel.app/",
+        "github": "https://github.com/atharvix/sugar",
+        "impact": "Provides an accessible tool for early diabetes risk assessment, enabling proactive health management and potentially reducing complications through timely intervention."
     }
 ]
