@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Code, Server, Database, Layout, Smartphone, Box, Terminal, Cpu, Zap, Globe } from 'lucide-react';
@@ -6,17 +6,22 @@ import './Skills.css';
 
 const allSkills = [
     { name: 'React', icon: Code },
+    { name: 'Angular', icon: Code},
     { name: 'TypeScript', icon: Code },
+    { name: 'Express.js', icon: Server},
     { name: 'Node.js', icon: Server },
     { name: 'PostgreSQL', icon: Database },
     { name: 'CSS/Sass', icon: Layout },
     { name: 'Svelte', icon: Box },
     { name: 'Mobile Dev', icon: Smartphone },
     { name: 'System Design', icon: Cpu },
+    { name: 'IOT', icon: Cpu},
     { name: 'Git', icon: Terminal },
     { name: 'Docker', icon: Box },
+    { name: 'Postman', icon: Box },
     { name: 'WebGL', icon: Zap },
     { name: 'GraphQL', icon: Globe },
+    { name: 'SupaBase', icon: Database},
 ];
 
 const Skills = () => {
@@ -28,7 +33,6 @@ const Skills = () => {
         if (!scroller) return;
 
         // Duplicate skills for seamless loop
-        const skillItems = scroller.querySelectorAll('.skill-item');
         const scrollerWidth = scroller.scrollWidth / 2;
 
         // Infinite horizontal scroll animation
@@ -59,7 +63,7 @@ const Skills = () => {
                     <div className="skills-scroller" ref={scrollerRef}>
                         {/* Render skills twice for seamless loop */}
                         {[...allSkills, ...allSkills].map((skill, index) => (
-                            <div key={index} className="skill-item">
+                            <div key={`${skill.name}-${index}`} className="skill-item">
                                 <skill.icon className="skill-icon" size={32} />
                                 <span className="skill-name mono">{skill.name}</span>
                             </div>

@@ -34,9 +34,9 @@ const Hero = () => {
         <section className="hero" ref={containerRef}>
             <div className="container hero-content">
                 <div className="hero-text">
-                    <h2 className="hero-greeting mono text-cyan">&gt; INITIALIZING SYSTEM...</h2>
+                    <h2 className="hero-greeting mono text-cyan">&gt; INITIALIZING SYSTEM...</h2> 
                     <h1 className="hero-title">
-                        <span className="block">CREATIVE</span>
+                        <span className="block">CREATIVE</span> 
                         <span className="block text-purple">TECHNOLOGIST</span>
                     </h1>
                     <p className="hero-role mono">

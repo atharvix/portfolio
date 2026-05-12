@@ -9,37 +9,31 @@ gsap.registerPlugin(ScrollTrigger);
 const experiences = [
     {
         id: 'exp-1',
-        role: 'Frontend Engineer Intern',
-        company: 'TechCorp Inc.',
-        duration: 'Jun 2023 - Aug 2023',
+        role: 'Systems Software Intern',
+        company: 'ENTION®',
+        duration: 'Feb 2026 - Aug 2026',
         impact: [
-            'Built responsive dashboard using React and TypeScript',
-            'Improved page load time by 40% through code splitting',
-            'Collaborated with design team on component library'
+            'Worked on operating system–level components with a focus on performance',
+            'process management, and system behavior. Explored scheduling, memory handling, and low-level debugging',
+            'in Linux-based environments while building tools and modules',
+            'to better understand system internals and resource usage.'
+
         ]
     },
     {
         id: 'exp-2',
-        role: 'Freelance Web Developer',
-        company: 'Digital Agency',
-        duration: 'Jan 2022 - May 2023',
+        role: 'Backend Web Developer Intern',
+        company: 'ENTION®',
+        duration: 'June 2025 - Aug 2025',
         impact: [
-            'Delivered 8+ client websites with 100% satisfaction rate',
-            'Specialized in GSAP animations and WebGL experiences',
-            'Managed full project lifecycle from design to deployment'
+            'Backend Developer',
+            'Developed and maintained RESTful APIs and backend services using Node.js and Spring Boot',
+            'Implemented authentication, database interactions, and performance optimizations while ensuring',
+            'secure and scalable system design across production-style projects.'
+
         ]
     },
-    {
-        id: 'exp-3',
-        role: 'Full Stack Developer Intern',
-        company: 'StartUp Labs',
-        duration: 'Summer 2022',
-        impact: [
-            'Developed RESTful APIs using Node.js and Express',
-            'Implemented authentication system with JWT',
-            'Wrote unit tests achieving 85% code coverage'
-        ]
-    }
+    
 ];
 
 const Experience = () => {

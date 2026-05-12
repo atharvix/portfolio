@@ -53,7 +53,7 @@ const About = () => {
                     <div className="about-text">
                         <h2 className="section-title mono text-cyan">_ABOUT</h2>
                         <p className="lead">
-                            I build secure backend systems with a <span className="text-cyan">Linux-first</span> mindset and a focus on <span className="text-purple">performance</span> at scale.
+                            I build secure backend systems with a <span className="text-cyan">systems-level</span> mindset and a focus on <span className="text-purple">performance</span> at scale.
                         </p>
                         <p className="mono" style={{ fontSize: '0.95rem', lineHeight: '1.8', opacity: 0.9 }}>
                             <span className="text-dim"># Core competencies:</span><br />

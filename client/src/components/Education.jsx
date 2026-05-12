@@ -52,8 +52,8 @@ const Education = () => {
                 <div className="timeline">
                     <div className="timeline-line"></div>
 
-                    {educationData.map((edu, index) => (
-                        <div key={index} className="edu-item">
+                    {educationData.map((edu) => (
+                        <div key={edu.id} className="edu-item">
                             <div className="edu-node glow-box"></div>
                             <div className="edu-content">
                                 <span className="edu-year mono text-green">{edu.year}</span>
